@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
+    <title>User Info - Page 3 of 5</title>
+    <!--<link rel="stylesheet" href="{{ url_for('static', filename='css/style_blue_home.css') }}" type="text/css"> -->
+    <!--favicon -->
+    <link rel="shortcut icon" type="image/png" href="basketball.png" sizes="152x52" style="position: relative; top: 0px; left: 0px;">
+    <style>
+        html {
+            font-family: "Oswald", sans-serif;
+
+            background: radial-gradient(circle, rgba(94, 208, 170, 0.8) 50%, rgba(0, 143, 186, 0.8) 200%);
+            font-family: "helvetica", sans-serif;
+        }
+        body {
+             /*<!-- background: radial-gradient(circle, rgba(94, 208, 170, 0.9) 50%, rgba(0, 143, 186, 0.9) 250%);
+            background-color: rgba(255, 0, 0, 1); -->*/
+
+            margin: 0px;
+            height: 50vh;
+           
+   }
+        main {
+    
+            padding-bottom: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: auto;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            min-height: 500px;
+          
+            padding-bottom: 25px;
+            padding-top: 25px;
+            
+         
+        }
+        h3 {
+            line-height: 1.5;
+        }
+        
+        
+        input {
+            font-weight: bold;
+            cursor: pointer;
+        }
+        a {
+            font-size: large;
+            text-decoration: none;
+        }
+        .form-menu {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 0px;
+            padding: 20px;
+            padding-bottom: 20px;
+        }
+
+        .form-menu label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .form-menu .radio-group {
+            display: flex;
+            align-items: center;
+
+            margin-top: 10px;
+        }
+        .form-menu .radio-group input[type='radio'] {
+            margin-right: 10px;
+            margin-bottom: 15px;
+        }
+
+        .form-menu input[type="text"],
+        .form-menu select  {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        .user_input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        .user_check {
+      
+            padding: 10px;
+            padding: 0px;
+            margin-bottom: 0px;
+            box-sizing: border-box;
+      
+        }
+        .check_box {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            text-align: left;
+        }
+
+        .form-menu input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .form-menu .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+        }
+        .submit-btn {
+            display: flex;
+            justify-content: center;
+            border: 1px solid gray;
+         
+            transition:  background-color 0.5s ease-in-out;
+        }
+
+        .form-menu .submit-btn:hover {
+            background-color: #45a049;
+        }
+        label {
+            text-align: left;
+        }
+       
+
+        .submit-btn:hover {
+            background-color: #45a049;
+            box-shadow: inset 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        #gray_border {
+            border: 1px solid gray;
+        }
+    
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        .slide-in-text {
+            animation: slideIn 2.5s ;
+        }
+        a {
+            font-size: 20px;
+            text-decoration: none;
+            font-family: "helvetica", sans-serif;
+            transition: font-size .5s ease;
+            color:black;
+        }
+        a:hover {
+            font-size:x-large;
+        }
+        #a2 {
+            font-size: 20px; 
+            font-weight: 600;
+            color:black;
+        }
+        #a2:hover {
+            font-size:x-large;
+            color:teal;
+        }
+        .banner_links {
+            display: flex;
+            flex-direction: row; 
+            justify-content: center; 
+            align-items: center; 
+            cursor: pointer;
+            font-weight: bold;
+            letter-spacing: .25px;
+        }
+        .disappear {
+            display: flex;
+            flex-direction: row; 
+            justify-content: center; 
+            align-items: center; 
+            margin: 0px;
+            float: right;
+            cursor: pointer;
+            font-weight: bold;
+            padding: 10px;
+            font-size: 18px;
+            text-align: justify;
+            font-family: "helvetica", sans-serif;
+             color:black;
+        }
+        .dropdown {
+            position: relative;
+            display: block;
+            z-index: 10;
+            text-align: center;
+            width: 10vw;
+
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;           
+            background-color: white;
+             border-bottom: 0px;
+            padding: 20px;
+            margin-top: 150px;
+            line-height: 4;
+            height: auto;
+            right: 20%;
+            top: -30px;
+            white-space: nowrap;
+            transition: transform .5s ease;
+       
+        }
+        .dropdown-content a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            right: 100px;
+            text-decoration: none;
+            color: rgb(0, 36, 70);
+            font-size: large;
+            flex-wrap: no-wrap;
+            text-align: center;
+            text-decoration: none;
+            transition: font-size .5s ease;
+            color: black;
+            color:black;
+        }
+        .dropdown-content a:hover {
+            color: rgb(0, 36, 70);
+            text-align: center;
+            text-decoration: underline;
+            font-size: x-large;
+            color: teal;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+            border: 3px solid rgb(0, 36, 70);
+            border-radius: 12px;
+            transform: translateX(20px);
+        }
+        #heaven {
+            color: inherit; /* Maintain the current text color */
+            text-decoration: none; /* Remove the underline */
+        }
+        
+        #heaven:visited,
+        #heaven:active {
+            color: inherit; /* Keep the same color as before */
+            text-decoration: none; /* Ensure the underline doesn't appear */
+        }
+        a {
+        color: #007bff; /* Change link color */
+        color: black;
+        text-decoration: none;
+        }
+        
+        a:hover {
+       
+        color: teal;
+        text-decoration: underline;
+        }
+
+        #banner1 {
+        display: none;
+        }
+        .icon {
+            width: 60px;
+            height: 60px;
+            display: inline-block;
+            margin: 0px;
+            padding: 10px;
+            transform: scaleX(1);
+            
+        }
+        .icon1 {
+            width: 60px;
+            height: 60px;
+            display: inline-block;
+            margin: 40px;
+            padding: 10px;
+            transform: scaleX(1);
+            animation: dilate 8s infinite; /* Apply the animation */
+        }
+        
+        @keyframes dilate {
+            0% {
+                transform: scale(1) scaleX(1); /* Normal size and flip horizontally */
+            }
+            10% {
+                transform: scale(1) scaleX(1); /* Start dilating and flip horizontally */
+            }
+            40% {
+                transform: scale(1) scaleX(1); /* Return to normal size and flip horizontally */
+            }
+            60% {
+                transform: scale(1.12) scaleX(1); /* Stay normal and flip horizontally */
+            }
+            65% {
+                transform: scale(1) scaleX(1); /* Dilate again and flip horizontally */
+            }
+            100% {
+                transform: scale(1) scaleX(1); /* Back to normal and flip horizontally */
+            }
+        }
+        @media only screen and (min-width: 1101px) {
+            #banner2 {
+                display: none;
+                }
+            #banner1 {
+                display: flex; flex-direction: row; align-items: center; justify-content: space-between; flex-wrap: wrap; align-items: center;
+                }
+
+                main {
+                    min-height: 550px;
+                    
+                }
+                #ad_cont {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+              
+             
+                }
+                #ad_mobile {
+                display: none;
+                }
+                #ad0 {
+                    display: none;
+                }
+                #ad1 {
+                    display: block;
+                    padding-bottom: 20px;
+                 
+                }
+                #ls {
+            
+                    
+                }
+                #ad2 {
+                    display: block;
+                    padding-bottom: 20px;
+                }
+        }
+
+        @media only screen and (max-width: 1100px) {
+            #banner2 {
+                display: none;
+                }
+            #banner1 {
+                display: flex; flex-direction: row; align-items: center; justify-content: space-between; flex-wrap: wrap; align-items: center;
+                }
+
+               
+                main {
+                    min-height: 550px;
+                    
+                }
+            #ad_cont {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            #ad_mobile {
+                display: none;
+            }
+            #ad0 {
+                display: block;
+                margin-bottom: 20px;
+              
+
+            }
+            #ad1 {
+                display: none;
+            }
+         
+            #ad2 {
+                display: none;
+            }
+        }
+        @media only screen and (max-width: 750px) {
+            main {
+                min-height: 550px;
+                
+            }
+            #jungle {
+                justify-content: center;
+                }
+                #banner2 {
+                    display: flex; flex-direction: row; align-items: center; justify-content: space-evenly; flex-wrap: wrap;
+                    }
+                    #banner1 {
+                    display: none;
+                    }
+
+            #ad_cont {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                
+             
+            }
+            #ad_mobile {
+                display: block;
+           
+             
+            }
+            #ad0 {
+                display: none;
+             
+            }
+            #ad1 {
+                display: none;
+            }
+            #ls {
+                margin-top: 20px;
+            }
+            #ad2 {
+                display: none;
+            }
+        }
+        @media only screen and (max-width: 400px) {
+            main {
+                min-height: 550px;
+                
+            }
+            #jungle {
+                justify-content: center;
+                }
+                #banner2 {
+                    display: flex; flex-direction: row; align-items: center; justify-content: space-evenly; flex-wrap: wrap;
+                    }
+                    #banner1 {
+                    display: none;
+                    }
+
+            #ad_cont {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                margin-top:0px;
+             
+            }
+            #ad_mobile {
+                display: block;
+           
+            
+            }
+            #ad0 {
+                display: none;
+             
+            }
+            #ad1 {
+                display: none;
+            }
+            #ls {
+                margin-top: 20px;
+            }
+            #ad2 {
+                display: none;
+            }
+        }
+     
+
+    </style>
+    
+</head>
+
+<body>
+ 
+    <header style=' margin-top: 0px;'>
+        
+        <div class="banner" id='banner1' >
+            <div style='margin-top: 20px;display: flex; flex-direction: row; line-height: 1; width: 100%; background-color: #f9f9f9; border-bottom: 1px solid black; justify-content: space-between; align-items:center; white-space: nowrap; '>
+
+                <div style='box-shadow: inset 0px 2px 4px rgba(0,0,0,0.5), inset 0px -2px 4px  rgba(0,0,0,0.5); display: flex; justify-content: space-evenly; align-items: center; width: 100%; background-color: #f9f9f9; font-size: 24px; height: 96px; '>
+                    <div>
+                        <h1 class='slide-in-text' style='font-weight: 600; display: flex; flex-direction: row; justify-content: center; align-items: center; letter-spacing: 1px;color: rgb(255,170,120); -webkit-text-stroke: 1px teal; text-shadow: 2px 2px teal;  font-style:italic;'>
+                            ParkPlay  
+                            <span>
+                                <img src="basketball.png" alt="Basketball Image" class="icon">
+                            </span> 
+                        </h1>  
+                    </div>
+                    <div>
+                        <a class='disappear' id='a2'  href='index.html' >Sign-Up Sheets</a>
+                    </div>   
+                    <div>
+                        <a class='disappear' id='a2' href='my_reservations.html' >My Reservations</a>
+                    </div>   
+                </div>   
+            </div>
+            <div id='jungle'style='justify-content: space-around;box-shadow: inset 0px 2px 4px rgba(0,0,0,0.5), inset 0px -2px 4px  rgba(0,0,0,0.5); border-bottom: 1px solid black; margin-top: 10px; width: 100%; display: flex; flex-direction: row; background-color: #f9f9f9; border-bottom: 1px solid black;  flex-wrap: wrap; line-height: 1; height: 60px;  '>
+                <a class='disappear' href='user_guide.html'>User Guide</a>  
+                <a class='disappear' href='analytics.html'>Analytics</a>  
+                <a class='disappear' href='policies.html' >Policies</a>
+                <a class='disappear' href='donate.html'>Donate</a>
+                <a class='disappear'href='contact_us.html' >Contact Us</a>
+            </div>
+           
+        </div>
+        </div>
+            <div class="banner" id='banner2' >
+            <div style='box-shadow: inset 0px 2px 4px rgba(0,0,0,0.5), inset 0px -2px 4px  rgba(0,0,0,0.5);margin-top: 20px;display: flex; flex-direction: row;  border-bottom: 1px solid black;  background-color: #f9f9f9; width: 100%; justify-content: space-evenly; align-items: center; height: 96px; line-height:1; font-size: 24px; '>
+                <div style=' display: flex; justify-content: center;'>
+                <h1 class='slide-in-text' style='display: relative; flex-direction: row; align-items: center;margin-left:-15px; letter-spacing: 1px; font-weight: 600; letter-spacing: 1px; color: rgb(255,170,120); -webkit-text-stroke: 1px teal; text-shadow: 2px 2px teal; font-style:italic;'>ParkPlay</h1>
+            </div>
+            <div class="dropdown" style='display: flex; justify-content: center;'>
+            <a style='text-decoration: none; font-size: xx-large;' id="heaven" href="#index">  <span>
+                <img src="basketball.png" alt="Basketball Image" class="icon1">
+            </span></a>
+                <div class='dropdown-content' style='line-height: 2.5;'>
+                    <a class='banner_links' href='index.html.html'>Sign-Up Sheets</a>
+                    <a class='banner_links' href='my_reservations.html' >My Reservations</a>
+                    <a class='banner_links' href='user_guide.html'>User Guide</a>
+                    <a class='banner_links' href='analytics.html'>Analytics</a>
+                    <a class='banner_links' href='policies.html' >Policies</a>
+                    <a class='banner_links' href='donate.html'>Donate</a>
+                    <a class='banner_links'href='contact_us.html' >Contact Us</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </header>
+   
+    <main >
+        <div id='ad_cont'>
+            <div id='ad_mobile' >
+                <h5 style='text-align: center; margin:0px; padding: 0px; padding-top:0px; font-size:12px; color: gray; font-weight: 200;'>ADVERTISEMENT</h5>
+                <div style='border:1px solid black; padding: 0px; margin: 0px; border-radius: 5px; width: 320px;min-width: 320px; height: 100px;  min-height:100px; background-color: #f9f9f9; box-shadow:  0px 2px 4px rgba(0,0,0,0.5);'>
+                    <img src="nike_ad_4.png" alt="nike ad two" style="object-fit: cover; object-position: center -0px; width: 320px;min-width: 320px; height: 100px;  min-height: 100px;" >
+                </div>
+            </div>
+            <div id='ad0' >
+                <h5 style='text-align: center; margin:0px; padding: 0px; padding-top:0px; font-size:12px; color: gray; font-weight: 200;'>ADVERTISEMENT</h5>
+                <div style='border:1px solid black; padding: 0px; margin: 0px; border-radius: 5px; width: 728px;min-width: 728px; height: 90px;  min-height:90px; background-color: #f9f9f9; box-shadow:  0px 2px 4px rgba(0,0,0,0.5);'>
+                    <img src="nike_ad_4.jpeg" alt="nike ad two" style="object-fit: cover; object-position: center -110px; width: 728px;min-width: 728px; height: 90px;  min-height: 90px;" >
+                </div>
+            </div>
+            <div id='ad1'>
+                <h5 style='text-align: center; margin:0px; padding: 0px; padding-top:0px; font-size:12px; color: gray; font-weight: 200;'>ADVERTISEMENT</h5>
+                <div style='border:1px solid black; padding: 0px; margin: 0px; border-radius: 5px; width: 300px;min-width: 300px; height: 600px;  min-height: 600px; background-color: #f9f9f9; box-shadow:  0px 2px 4px rgba(0,0,0,0.5);'>
+                    <img src="nike_ad_2.jpeg" alt="nike ad" style="object-fit: cover; object-position: -10px;width: 300px;min-width: 300px; height: 600px;  min-height: 600px;" >
+                </div>
+            </div>
+
+            <div>
+                <div id = 'ls' style='display: flex; flex-wrap: nowrap;  justify-content: center; flex-direction: column; text-align: center;border: 1px solid black;  width: 100%; max-width: 475px; background-color: white;  box-shadow:  2px 2px 4px rgba(0,0,0,0.5); margin-bottom: 25px;  border-radius: 5px; '>
+                    <h1 style='word-wrap: break-word; padding-left: 5px; padding-right: 5px; margin-bottom: 10px; text-decoration: underline;'>Reservation Summary</h1>
+            
+                    <h3 style="padding: 20px; text-align: justify; margin: 0 auto; ">
+                    Date:&nbsp;<span style=" font-weight: 400;"> Saturday, February 01, 2025</span><br>
+                    Time:<span style=" font-weight: 400; float: right;"> 05:00 pm</span><br>
+                    Park:<span style="font-weight: 400; float: right;"> Gabriel Park</span><br>
+                    Sport:<span style="font-weight: 400; float: right;"> Tennis</span><br>
+                    Sub-location:<span style="font-weight: 400; float: right;"> Court #2</span><br>
+                    <!-- Status:<span style="font-weight: 400; float: right;"> {{ game[3].title() }}</span><br> -->
+                    Status: <span style="font-weight: 400; float: right;"> Available</span><br></br>
+                    </h3>
+             
+            
+                    </div>
+            
+                
+                    <div style='display: flex; flex-wrap: wrap;  justify-content: center; flex-direction: column; text-align: center;border: 1px solid black;  width: 100%; max-width: 475px; background-color: white; margin-bottom: 0px; box-shadow:  2px 2px 4px rgba(0,0,0,0.5);  border-radius: 5px;  line-height: 2;'>
+                    <h2 style='word-wrap: break-word; padding-left: 5px; padding-right: 5px; margin-bottom: 10px; text-decoration: underline;'>Select an Action:</h2>     
+                    <div class='check_box' id="direction" style='display: flex; flex-wrap: wrap;  text-align: center; flex-direction: row; margin: 0px; '>
+                        <div  style='margin-right: 20px; margin-left: 20px;'>    
+                        <h4 >
+                                <input class="user_check" name="avaiable" type="radio" id="available_reserve" value="available_unavailable">
+                                <label for="option_1">Reserve</label>
+                            </h4>
+                        </div>
+                        <div style='margin-right: 20px; margin-left: 20px;  line-height: 01;'>
+                            <h4 >
+                                <input class="user_check" name="avaiable" type="radio" id="available_joinable"  value="available_joinable">
+                                <label for="option_2">Reserve and Invite Others to Join</label>
+                            </h4>
+                        </div>
+                    </div> 
+                    <br>
+                    </div>
+                  
+                   
+                        <div id='mega_container' style="display: none; flex-direction: column; align-items: center; justify-content: center; width: 100%;   max-width: 475px; margin: 0 auto;  background-color: #f9f9f9; margin-top: 25px;">
+                            <div class='form-menu' style= "   box-shadow:  2px 2px 4px rgba(0,0,0,0.5);">
+                                <form id="parkForm" >
+                                  
+                                    <div id='conditional_fields1' style="display: none ;">
+                                     
+                                    <label for="first_name">First Name of Reserver:</label>
+                                    <input class="user_input" id="first_name" minlength='3' required autocomplete='off' ></input>
+                                
+                                    <label for="last_name">Last Name of Reserver:</label>
+                                    <input class="user_input" id="last_name" minlength='3' required autocomplete='off' ></input>
+                             
+                                    </div>
+                             
+            
+               
+                                    <div id='conditional_fields' style="display: none;">
+            
+                                    <label for="spot_openings">Maximum Joins:</label>
+                                    <select id="spot_openings" name="spot_openings">
+                                        <option selected value="-">-</option>
+                                        {% for i in range(1, max_openings + 1) %}
+                                        <option value="{{ i }}">{{ i }}</option>
+                                        {% endfor %}
+                                        
+                                    </select>
+                                    <label for="level">Ability Level:</label>
+                                    <select id="level" name="level">
+                                        <option selected value="-">-</option>
+                                        <option  value="beginner">Beginner</option>
+                                        <option  value="intermediate">Intermediate</option>
+                                        <option  value="advanced">Advanced</option>
+                                    </select>
+                                    <label for="points">Point Rules:</label>
+                                   <select id="points" name="points">
+                                    <option selected value="-">-</option>
+                                        <option  value="informal">Informal</option>
+                                        <option  value="formal">Formal</option>
+                                        <option  value="no points">No Points</option>
+                                    </select>
+            
+                                </div>
+                            
+                                  
+                            
+                                    <br>
+                                    <a href="confirmation.html" class="submit-btn" id="gray_border" style="display: none; width: calc(100% - 30px);">Submit</a>
+                                </form>
+                                </div>
+                        </div>
+            
+            
+            </div>
+               
+
+            
+            <div id='ad2'>
+                <h5 style='text-align: center; margin:0px; padding: 0px; padding-top:0px; font-size:12px; color: gray; font-weight: 200;'>ADVERTISEMENT</h5>
+                <div style='border:1px solid black; padding: 0px; margin: 0px; border-radius: 5px; width: 300px;min-width: 300px; height: 600px;  min-height: 600px; background-color: #f9f9f9; box-shadow:  0px 2px 4px rgba(0,0,0,0.5);'>
+                    <img src="nike_ad_2.jpeg" alt="nike ad" style="object-fit: cover; object-position: -10px;width: 300px;min-width: 300px; height: 600px;  min-height: 600px;" >
+                </div>
+            </div>
+        </div>
+
+    
+    
+    </main>
+
+ 
+   
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+        document.addEventListener('copy', function(event) {
+                    event.preventDefault(); // Prevent default copy behavior
+                    alert('Copying is disabled on this web page.');
+                });
+        
+        document.getElementById('first_name').addEventListener('input', function(e) {
+            // Replace spaces with an empty string
+            e.target.value = e.target.value.replace(/\s+/g, '');
+        });
+        document.getElementById('last_name').addEventListener('input', function(e) {
+            // Replace spaces with an empty string
+            e.target.value = e.target.value.replace(/\s+/g, '');
+        });
+    
+        const availableReserve = document.getElementById('available_reserve');
+        const availableJoinable = document.getElementById('available_joinable');
+        //const conditionalFields = document.getElementById('conditional_fields');
+        const conditionalFields = document.getElementById('conditional_fields');
+        const conditionalFields1 = document.getElementById('conditional_fields1');
+        
+        
+        const parkForm = document.getElementById('parkForm');
+    
+        // Function to toggle visibility based on the selected option
+        function toggleFields() {
+            if (availableJoinable.checked) {
+                conditionalFields.style.display = 'block'; // Show the fields
+            } else {
+                conditionalFields.style.display = 'none'; // Hide the fields
+            }
+        
+            if (availableJoinable.checked || availableReserve.checked) {
+                conditionalFields1.style.display = 'block';
+            } else {
+                conditionalFields1.style.display = 'none';
+            }
+         
+        }
+    
+        // Attach event listeners to radio buttons
+        if (availableReserve !== null) {
+        availableReserve.addEventListener('change', toggleFields);
+        }
+        if (availableJoinable !== null) {
+        availableJoinable.addEventListener('change', toggleFields);
+        }
+
+        const radioButtons = document.querySelectorAll('.user_check');
+        //console.log(radioButtons)
+        // Add an event listener to each radio button
+        radioButtons.forEach(radio => {
+            radio.addEventListener('change', () => {
+                if (radio.checked) {
+                    console.log(`Selected value: ${radio.value}`);
+                    document.querySelector('.submit-btn').style.display = 'block';
+                    document.getElementById('mega_container').style.display = 'block';
+                    radio_value = radio.value
+                }
+            });
+        });
+    
+        parkForm.addEventListener('submit', function (event) {
+           event.preventDefault(); // Prevent form from submitting the traditional way
+           if (available_joinable !== null) {
+            if (available_joinable.checked) {
+                if (document.getElementById('spot_openings').value == "-") {
+                    alert('Please select an "Maximum Joins".')
+                    return
+                }
+                if (document.getElementById('level').value == "-") {
+                    alert('Please select an "Ability Level".')
+                    return
+                }
+            
+                if (document.getElementById('points').value == "-") {
+                    alert('Please select an "Point Rules".')
+                    return
+                }
+            }
+        }
+
+            const formData = {
+                action: radio_value,
+                first_name: document.getElementById('first_name').value,
+                last_name: document.getElementById('last_name').value,
+                spot_openings: document.getElementById('spot_openings').value,
+                level: document.getElementById('level').value,
+                points: document.getElementById('points').value
+            };
+            if (!navigator.cookieEnabled) {
+                alert("Cookies are disabled in your browser. Please enable cookies to continue.\n\nFor Chrome Browser:\nBrowser Preferences > Settings > Privacy and Security > Cookies and Other site data > Allow all cookies")
+                return
+            }
+            fetch('/user_input', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json()) // Assuming the server responds with JSON
+            .then(data => {
+                console.log(data); // Handle response data here
+                if (data.redirect_url) {
+                window.location.href = data.redirect_url; // Redirect based on the URL received from the server
+                }  
+            })
+
+          
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    });
+    </script>
+</body>
+</html>

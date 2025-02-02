@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
+    <title>Confirmation - Page 5 of 5</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_blue_home.css') }}" type="text/css"> 
+    <!--favicon -->
+    <link rel="shortcut icon" type="image/png" href="basketball.png" sizes="152x52" style="position: relative; top: 0px; left: 0px;">
+   <style>
+        html {
+         
+            font-family: helvetica;
+            background: radial-gradient(circle, rgba(94, 208, 170, 0.8) 50%, rgba(0, 143, 186, 0.8) 200%);
+        }
+        body {
+            /*<!-- background: radial-gradient(circle, rgba(94, 208, 170, 0.9) 50%, rgba(0, 143, 186, 0.9) 250%);
+           background-color: rgba(255, 0, 0, 1); -->*/
+
+           margin: 0px;
+           height: 50vh;
+          
+  }
+
+
+        main {
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+         
+            overflow-y: none;
+            min-height:600px;
+            padding-top: 0vh;
+            padding-bottom: 0vh;
+          
+         
+        }
+        footer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        
+            border-bottom: 5px solid #f9f9f9;
+            line-height: 1;
+    
+            background-color: white;
+            padding: 5px;
+            text-align: justify;
+  
+        }
+  
+ 
+        a {
+            font-size: large;
+            text-decoration: none;
+        }
+       
+       
+        html {
+            font-family: "Oswald", sans-serif;
+
+       
+            font-family: "helvetica", sans-serif;
+        }
+        body {
+             /*<!-- background: radial-gradient(circle, rgba(94, 208, 170, 0.9) 50%, rgba(0, 143, 186, 0.9) 250%);
+            background-color: rgba(255, 0, 0, 1); -->*/
+
+            margin: 0px;
+            height: 50vh;
+           
+         
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 75vh;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        .slide-in-text {
+            animation: slideIn 2.5s ;
+        }
+        a {
+            font-size: 20px;
+            text-decoration: none;
+            font-family: "helvetica", sans-serif;
+            transition: font-size .5s ease;
+            color:black;
+        }
+        a:hover {
+            font-size:x-large;
+        }
+        #a2 {
+            font-size: 20px; 
+            font-weight: 600;
+            color:black;
+        }
+        #a2:hover {
+            font-size:x-large;
+            color:teal;
+        }
+        .banner_links {
+            display: flex;
+            flex-direction: row; 
+            justify-content: center; 
+            align-items: center; 
+            cursor: pointer;
+            font-weight: bold;
+            letter-spacing: .25px;
+        }
+        .disappear {
+            display: flex;
+            flex-direction: row; 
+            justify-content: center; 
+            align-items: center; 
+            margin: 0px;
+            float: right;
+            cursor: pointer;
+            font-weight: bold;
+            padding: 10px;
+            font-size: 18px;
+            text-align: justify;
+            font-family: "helvetica", sans-serif;
+             color:black;
+        }
+        .dropdown {
+            position: relative;
+            display: block;
+            z-index: 10;
+            text-align: center;
+            width: 10vw;
+
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;           
+            background-color: white;
+             border-bottom: 0px;
+            padding: 20px;
+            margin-top: 150px;
+            line-height: 4;
+            height: auto;
+            right: 20%;
+            top: -30px;
+            white-space: nowrap;
+            transition: transform .5s ease;
+       
+        }
+        .dropdown-content a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            right: 100px;
+            text-decoration: none;
+            color: rgb(0, 36, 70);
+            font-size: large;
+            flex-wrap: no-wrap;
+            text-align: center;
+            text-decoration: none;
+            transition: font-size .5s ease;
+            color: black;
+            color:black;
+        }
+        .dropdown-content a:hover {
+            color: rgb(0, 36, 70);
+            text-align: center;
+            text-decoration: underline;
+            font-size: x-large;
+            color: teal;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+            border: 3px solid rgb(0, 36, 70);
+            border-radius: 12px;
+            transform: translateX(20px);
+        }
+        #heaven {
+            color: inherit; /* Maintain the current text color */
+            text-decoration: none; /* Remove the underline */
+        }
+        
+        #heaven:visited,
+        #heaven:active {
+            color: inherit; /* Keep the same color as before */
+            text-decoration: none; /* Ensure the underline doesn't appear */
+        }
+        a {
+        color: #007bff; /* Change link color */
+        color: black;
+        text-decoration: none;
+        }
+        
+        a:hover {
+       
+        color: teal;
+        text-decoration: underline;
+        }
+
+        #banner1 {
+        display: none;
+        }
+        .icon {
+            width: 60px;
+            height: 60px;
+            display: inline-block;
+            margin: 0px;
+            padding: 10px;
+            transform: scaleX(1);
+            
+        }
+        .icon1 {
+            width: 60px;
+            height: 60px;
+            display: inline-block;
+            margin: 40px;
+            padding: 10px;
+            transform: scaleX(1);
+            animation: dilate 8s infinite; /* Apply the animation */
+        }
+        
+        @keyframes dilate {
+            0% {
+                transform: scale(1) scaleX(1); /* Normal size and flip horizontally */
+            }
+            10% {
+                transform: scale(1) scaleX(1); /* Start dilating and flip horizontally */
+            }
+            40% {
+                transform: scale(1) scaleX(1); /* Return to normal size and flip horizontally */
+            }
+            60% {
+                transform: scale(1.12) scaleX(1); /* Stay normal and flip horizontally */
+            }
+            65% {
+                transform: scale(1) scaleX(1); /* Dilate again and flip horizontally */
+            }
+            100% {
+                transform: scale(1) scaleX(1); /* Back to normal and flip horizontally */
+            }
+        }
+        @media only screen and (min-width: 1051px) {
+            #banner2 {
+                display: none;
+                }
+            #banner1 {
+                display: flex; flex-direction: row; align-items: center; justify-content: space-between; flex-wrap: wrap; align-items: center;
+                }
+
+                main {
+                    min-height: 750px;
+                    
+                }
+                #ad_cont {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+              
+             
+                }
+                #ad_mobile {
+                display: none;
+                }
+                #ad0 {
+                    display: none;
+                }
+                #ad1 {
+                    display: block;
+                    padding-bottom: 20px;
+                 
+                }
+                #ls {
+            
+                    
+                }
+                #ad2 {
+                    display: block;
+                    padding-bottom: 20px;
+                }
+        }
+
+        @media only screen and (max-width: 1050px) {
+            #banner2 {
+                display: none;
+                }
+            #banner1 {
+                display: flex; flex-direction: row; align-items: center; justify-content: space-between; flex-wrap: wrap; align-items: center;
+                }
+
+               
+                main {
+                    min-height: 850px;
+                    
+                }
+            #ad_cont {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            #ad_mobile {
+                display: none;
+            }
+            #ad0 {
+                display: block;
+                margin-bottom: 20px;
+              
+
+            }
+            #ad1 {
+                display: none;
+            }
+         
+            #ad2 {
+                display: none;
+            }
+        }
+        @media only screen and (max-width: 750px) {
+            main {
+                min-height: 850px;
+                
+            }
+            #jungle {
+                justify-content: center;
+                }
+                #banner2 {
+                    display: flex; flex-direction: row; align-items: center; justify-content: space-evenly; flex-wrap: wrap;
+                    }
+                    #banner1 {
+                    display: none;
+                    }
+
+            #ad_cont {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                
+             
+            }
+            #ad_mobile {
+                display: block;
+           
+             
+            }
+            #ad0 {
+                display: none;
+             
+            }
+            #ad1 {
+                display: none;
+            }
+            #ls {
+                margin-top: 20px;
+            }
+            #ad2 {
+                display: none;
+            }
+        }
+        @media only screen and (max-width: 400px) {
+            main {
+                min-height: 850px;
+                
+            }
+            #jungle {
+                justify-content: center;
+                }
+                #banner2 {
+                    display: flex; flex-direction: row; align-items: center; justify-content: space-evenly; flex-wrap: wrap;
+                    }
+                    #banner1 {
+                    display: none;
+                    }
+
+            #ad_cont {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                  margin-top:20px;
+             
+            }
+            #ad_mobile {
+                display: block;
+           
+            
+            }
+            #ad0 {
+                display: none;
+             
+            }
+            #ad1 {
+                display: none;
+            }
+            #ls {
+                margin-top: 20px;
+            }
+            #ad2 {
+                display: none;
+            }
+        }
+       
+     
+
+    </style>
+</head>
+<body>
+    <header style=' margin-top: 0px;'>
+        
+        <div class="banner" id='banner1' >
+            <div style='margin-top: 20px;display: flex; flex-direction: row; line-height: 1; width: 100%; background-color: #f9f9f9; border-bottom: 1px solid black; justify-content: space-between; align-items:center; white-space: nowrap; '>
+
+                <div style='box-shadow: inset 0px 2px 4px rgba(0,0,0,0.5), inset 0px -2px 4px  rgba(0,0,0,0.5); display: flex; justify-content: space-evenly; align-items: center; width: 100%; background-color: #f9f9f9; font-size: 24px; height: 96px; '>
+                    <div>
+                        <h1 class='slide-in-text' style='font-weight: 600; display: flex; flex-direction: row; justify-content: center; align-items: center; letter-spacing: 1px;color: rgb(255,170,120); -webkit-text-stroke: 1px teal; text-shadow: 2px 2px teal;  font-style:italic;'>
+                            ParkPlay  
+                            <span>
+                                <img src="basketball.png" alt="Basketball Image" class="icon">
+                            </span> 
+                        </h1>  
+                    </div>
+                    <div>
+                        <a class='disappear' id='a2'  href='index.html' >Sign-Up Sheets</a>
+                    </div>   
+                    <div>
+                        <a class='disappear' id='a2' href='my_reservations.html' >My Reservations</a>
+                    </div>   
+                </div>   
+            </div>
+            <div id='jungle'style='justify-content: space-around;box-shadow: inset 0px 2px 4px rgba(0,0,0,0.5), inset 0px -2px 4px  rgba(0,0,0,0.5); border-bottom: 1px solid black; margin-top: 10px; width: 100%; display: flex; flex-direction: row; background-color: #f9f9f9; border-bottom: 1px solid black;  flex-wrap: wrap; line-height: 1; height: 60px;  '>
+                <a class='disappear' href='user_guide.html'>User Guide</a>  
+                <a class='disappear' href='analytics.html'>Analytics</a>  
+                <a class='disappear' href='policies.html' >Policies</a>
+                <a class='disappear' href='donate.html'>Donate</a>
+                <a class='disappear'href='contact_us.html' >Contact Us</a>
+            </div>
+           
+        </div>
+        </div>
+            <div class="banner" id='banner2' >
+            <div style='box-shadow: inset 0px 2px 4px rgba(0,0,0,0.5), inset 0px -2px 4px  rgba(0,0,0,0.5);margin-top: 20px;display: flex; flex-direction: row;  border-bottom: 1px solid black;  background-color: #f9f9f9; width: 100%; justify-content: space-evenly; align-items: center; height: 96px; line-height:1; font-size: 24px; '>
+                <div style=' display: flex; justify-content: center;'>
+                <h1 class='slide-in-text' style='display: relative; flex-direction: row; align-items: center;margin-left:-15px; letter-spacing: 1px; font-weight: 600; letter-spacing: 1px; color: rgb(255,170,120); -webkit-text-stroke: 1px teal; text-shadow: 2px 2px teal; font-style:italic;'>ParkPlay</h1>
+            </div>
+            <div class="dropdown" style='display: flex; justify-content: center;'>
+            <a style='text-decoration: none; font-size: xx-large;' id="heaven" href="#index">  <span>
+                <img src="basketball.png" alt="Basketball Image" class="icon1">
+            </span></a>
+                <div class='dropdown-content' style='line-height: 2.5;'>
+                    <a class='banner_links' href='index.html'>Sign-Up Sheets</a>
+                    <a class='banner_links' href='my_reservations.html' >My Reservations</a>
+                    <a class='banner_links' href='user_guide.html'>User Guide</a>
+                    <a class='banner_links' href='analytics.html'>Analytics</a>
+                    <a class='banner_links' href='policies.html' >Policies</a>
+                    <a class='banner_links' href='donate.html'>Donate</a>
+                    <a class='banner_links'href='contact_us.html' >Contact Us</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </header>
+
+    
+   
+    <main style='display: flex; flex-direction: column;height: 100%; '>
+        <div id='ad_cont'>
+            <div id='ad_mobile' >
+                <h5 style='text-align: center; margin:0px; padding: 0px; padding-top:0px; font-size:12px; color: gray; font-weight: 200;'>ADVERTISEMENT</h5>
+                <div style='border:1px solid black; padding: 0px; margin: 0px; border-radius: 5px; width: 320px;min-width: 320px; height: 100px;  min-height:100px; background-color: #f9f9f9; box-shadow:  0px 2px 4px rgba(0,0,0,0.5);'>
+                    <img src="nike_ad_4.png" alt="nike ad two" style="object-fit: cover; object-position: center -0px; width: 320px;min-width: 320px; height: 100px;  min-height: 100px;" >
+                </div>
+            </div>
+            <div id='ad0' >
+                <h5 style='text-align: center; margin:0px; padding: 0px; padding-top:0px; font-size:12px; color: gray; font-weight: 200;'>ADVERTISEMENT</h5>
+                <div style='border:1px solid black; padding: 0px; margin: 0px; border-radius: 5px; width: 728px;min-width: 728px; height: 90px;  min-height:90px; background-color: #f9f9f9; box-shadow:  0px 2px 4px rgba(0,0,0,0.5);'>
+                    <img src="nike_ad_4.png" alt="nike ad two" style="object-fit: cover; object-position: center -110px; width: 728px;min-width: 728px; height: 90px;  min-height: 90px;" >
+                </div>
+            </div>
+            <div id='ad1'>
+                <h5 style='text-align: center; margin:0px; padding: 0px; padding-top:0px; font-size:12px; color: gray; font-weight: 200;'>ADVERTISEMENT</h5>
+                <div style='border:1px solid black; padding: 0px; margin: 0px; border-radius: 5px; width: 300px;min-width: 300px; height: 600px;  min-height: 600px; background-color: #f9f9f9; box-shadow:  0px 2px 4px rgba(0,0,0,0.5);'>
+                    <img src="nike_ad_2.jpeg" alt="nike ad" style="object-fit: cover; object-position: -10px;width: 300px;min-width: 300px; height: 600px;  min-height: 600px;" >
+                </div>
+            </div>
+
+            <div>
+                 <div id='ls' style='display: flex;  justify-content: center; flex-direction: column; text-align: center;border: 1px solid black;  width: 100%;  max-width: 475px; background-color: #f9f9f9;  border-radius: 5px;  box-shadow: 2px 2px 4px rgba(0,0,0,0.5);'>
+                    <h1 style='word-wrap: break-word; padding-left: 5px; padding-right: 5px; margin-bottom: 0px; text-decoration: underline;'>Server Message</h1>
+                <h2 style='text-align:center;'>"Your Request was Successful"</h2>
+                 </div>
+                <br>
+                <div style='display: flex;  justify-content: center; flex-direction: column; text-align: center;border: 1px solid black;  width: 100%;  max-width: 475px; background-color: #f9f9f9; margin-bottom: 25px; border-radius: 5px;  box-shadow: 0px 2px 4px rgba(0,0,0,0.5);'>
+                    
+                    <h1 style='word-wrap: break-word; padding-left: 5px; padding-right: 5px; margin-bottom: 10px; text-decoration: underline;'>Reservation Confirmation</h1>
+            
+                    <h3 style="padding: 20px; text-align: justify; margin: 0 auto; ">
+                    Date: &nbsp;<span style="font-weight: 400; float: right;">Friday, January 31, 2025</span><br>
+                    Time: <span style="font-weight: 400; float: right;"> 09:30 pm</span><br>
+                    Park: <span style="font-weight: 400; float: right;"> Gabriel Park</span><br>
+                    Sport: <span style="font-weight: 400; float: right;"> Tennis</span><br>
+                    Sub-location: <span style="font-weight: 400; float: right;"> Court #2</span><br>
+                    Status: <span style="font-weight: 400; float: right;"> Reserved</span><br></br>
+            
+                    Reserved By: <span style="font-weight: 400; float: right;">
+                        Jake K.
+                        </span><br>
+                        <div style='overflow-y: auto;'>
+                            Joined By: 
+                            <span id="joined_names"style="font-weight: 400; float: right; text-align: right;">
+                                Chris B. <br>
+                                Tara W. <br>
+                           
+                        
+                        </span>
+                        </div>
+                
+                    <div  id="container10">
+                    </br>
+                    Total Openings: <span style="font-weight: 400; float: right;"> 2</span><br>
+                    Spots Left: <span style="font-weight: 400; float: right;"> 0</span><br>
+                    Ability Level: <span style="font-weight: 400; float: right;"> Beginner</span><br>
+                    Point Rules: <span style="font-weight: 400; float: right;">No Points</span></h3>
+                    </div>
+            
+            
+            </div>
+               
+
+            
+            <div id='ad2'>
+                <h5 style='text-align: center; margin:0px; padding: 0px; padding-top:0px; font-size:12px; color: gray; font-weight: 200;'>ADVERTISEMENT</h5>
+                <div style='border:1px solid black; padding: 0px; margin: 0px; border-radius: 5px; width: 300px;min-width: 300px; height: 600px;  min-height: 600px; background-color: #f9f9f9; box-shadow:  0px 2px 4px rgba(0,0,0,0.5);'>
+                    <img src="nike_ad_2.jpeg" alt="nike ad" style="object-fit: cover; object-position: -10px;width: 300px;min-width: 300px; height: 600px;  min-height: 600px;" >
+                </div>
+            </div>
+        </div>
+
+       
+        
+            
+    
+        
+            
+        
+        
+        
+    </main>
+   
+    <!--<footer>
+        <div class="footees">
+        <div class="footer-section">
+          <h4 style='text-align: center;'><a href="/policy">Contact Us</a></h4>
+          
+        </div>
+        
+
+
+        <div class="footer-section">
+            <h4 style='text-align: center;'><a href="/policy">Policies</a></h4>
+           
+          </div>
+
+        <div class="footer-section">
+            <h4 style='text-align: center;'><a href="/court_analytics">Analytics</a></h4>
+           
+          </div>
+
+
+
+        
+      
+        <div class="footer-section">
+          <h4 style='text-align: center;'><a href="/policy">Donate</a></h4>
+         
+        </div>
+   
+    </div>
+        
+        <p style='font-size: small;'>&copy; 2024 ParkPlay. All Rights Reserved.</p>
+        <p style='font-size: small;'>2024 ParkPlay. All Rights Reserved.</p>
+      </footer>-->
+    </body>
+    <script>	
+       
+        document.addEventListener('DOMContentLoaded', function () {
+            if (!navigator.cookieEnabled) {
+                alert("Cookies are disabled in your browser. Please enable cookies to continue.\n\nFor Chrome Browser:\nBrowser Preferences > Settings > Privacy and Security > Cookies and Other site data > Allow all cookies")
+                return
+            }
+
+            //const joinedNames = document.getElementById('joined_names').textContent.trim();
+            //const container10 = document.getElementById('container10');
+    
+            // Hide container10 if joinedNames length is 2 characters or less
+            //if (joinedNames.length <= 1) {
+                //container10.style.display = 'none'; // Hide the second box
+            //}
+        });
+     
+    </script>
+
+</html>

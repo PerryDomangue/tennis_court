@@ -1,0 +1,33 @@
+
+user friendly:
+    -A user's full last name serves as their password to update their reservation.
+    -every thirty minutes a new reservation time becomes available (for fairness), on the last day of registering.
+    -the table headers are always shown in place, while you scroll any schedule times
+    -give user pop up messages with countdowns to over reserving or over joining
+    -give user pop up messages with countdowns for auth
+    -give user pop up messages with countdowns for excessive IP address usage
+    -users can confirm their reservation(s) or join(s) by using "My Reservations" or checking the registry for the time-slot with their name.
+    -users can alter or modify their reservations once they supply the full "last name" (that was supplied when the reservation or join was made) or the server confirms the finger print to confirm that they are using the same device.
+    -when making a using a registry, the browsers window tab name will give you the page number that your on, ex "page 3 of 5", for user to keep track of the process.
+    -reservation times are automatically updated on the schedule. The page will reload to update the reservations as soon as they are new reservations produced (XX:01, XX:16, XX:31, XX:46). the significance is that the user never needs to reload the screen to refresh the results. 
+
+configuration:
+    -over-booking (reserving and joining) is calculated on each particular court instead of the entire registry. if you overbook on "tennis court a" it wont effect the amount of reservations that you have for "tennis court B"; even if they are on the same registry, or side by side at the park.
+    -automatically deletes old reservations times, and adds new reservations; continuously.  
+    -the registry schedule has a date filter, and a reservation status filter ('available, unavailable, joinable') to show results
+    -"My Reservations" that will remember all reservations made from the device, that made the request, to reserve or join.
+    -there can be multiple courts on each park registry.
+  
+admin:
+    -has a user friendly way to create, update, delete; parks, sports and courts for the computer to implement; in a way uses existing park and sport data as presets, that reduce duplicates. 
+    -for each court, the admin can update the park hours (selected hours of operations), sub-location number (court #1), reservations duration (00:15, 00:30, 00:45, etc), lead-time days (reserve up to "X" day(s) from now), max reservations per user (1-5 per day), max joins per user (1-5 per day).
+    -each court has a "Utilization" average for reservations and joins. if the number is over 1 then the court reservations are being over utilize and the daily reservation limit should be lowered. Conversely, if the utilization co-efficient is low then reservation limit can be increased to maximize usage or each court. If the utilization is low, then it might help to extend the lead-time days too.
+    -each court has data records; it tells you info like an odometer, how many reservations, joins, etc. and it does it for the MTD, YTD and lifetime of the court. 
+
+security:
+    -Self Correcting: reservations are generated just in time on the last day of the scheduling period. Any abuse of reservations is automatically deleted in a matter of days, and wont effect any reservations in the future. 
+    -For Adverse Human Users: every thirty minutes a new reservation time becomes available (for security), on the last day of registering. For that last day of the scheduling period, a person would have to wait all day to abuse the reservations. If they waited til the end of the day, they would all be taken, and if they did it in the beginning of the day there wouldn't be any reservations yet. 
+    -For Adverse Robot Users: uses a Turing Test that was developed in house to filter out automated bots, without using email addresses.
+    -For All Adverse Users; users that clear there cookie data to get more attempts to auth, then they will be blocked from the User Auth Page, and their device finger prints are still log-able.
+    -Public and Private User Passwords; users first name and last initial as shown publicly for the individuals security (last names can be made up too). The first name is the pubic key and the last name is the private key.
+   

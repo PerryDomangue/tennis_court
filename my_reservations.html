@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
+    <title>Schedule - Page 2 of 5</title>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style_blue_home.css') }}" type="text/css"> -->
+    <!--favicon -->
+    <link rel="shortcut icon" type="image/png" href="basketball.png" sizes="152x52" style="position: relative; top: 0px; left: 0px;">
+    <style>
+      
+        html {
+            font-family: "Oswald", sans-serif;
+
+            background: radial-gradient(circle, rgba(94, 208, 170, 0.8) 50%, rgba(0, 143, 186, 0.8) 200%);
+            font-family: "helvetica", sans-serif;
+        }
+        body {
+             /*<!-- background: radial-gradient(circle, rgba(94, 208, 170, 0.9) 50%, rgba(0, 143, 186, 0.9) 250%);
+            background-color: rgba(255, 0, 0, 1); -->*/
+
+            font-family: helvetica, sans-serif;
+         
+            margin: 0px;
+            padding: 0px;
+            font-size: medium;
+            line-height: 1.5;
+            min-width: 90px;
+  
+    }
+
+      
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        .slide-in-text {
+            animation: slideIn 2.5s ;
+        }
+        a {
+            font-size: 20px;
+            text-decoration: none;
+            font-family: "helvetica", sans-serif;
+            transition: font-size .5s ease;
+            color:black;
+        }
+        a:hover {
+            font-size:x-large;
+        }
+        #a2 {
+            font-size: 20px; 
+            font-weight: 600;
+            color:black;
+        }
+        #a2:hover {
+            font-size:x-large;
+            color:teal;
+        }
+        .banner_links {
+            display: flex;
+            flex-direction: row; 
+            justify-content: center; 
+            align-items: center; 
+            cursor: pointer;
+            font-weight: bold;
+            letter-spacing: .25px;
+        }
+        .disappear {
+            display: flex;
+            flex-direction: row; 
+            justify-content: center; 
+            align-items: center; 
+            margin: 0px;
+            float: right;
+            cursor: pointer;
+            font-weight: bold;
+            padding: 10px;
+            font-size: 18px;
+            text-align: justify;
+            font-family: "helvetica", sans-serif;
+             color:black;
+        }
+        .dropdown {
+            position: relative;
+            display: block;
+            z-index: 10;
+            text-align: center;
+            width: 10vw;
+
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;           
+            background-color: white;
+             border-bottom: 0px;
+            padding: 20px;
+            margin-top: 150px;
+            line-height: 4;
+            height: auto;
+            right: 20%;
+            top: -30px;
+            white-space: nowrap;
+            transition: transform .5s ease;
+       
+        }
+        .dropdown-content a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            right: 100px;
+            text-decoration: none;
+            color: rgb(0, 36, 70);
+            font-size: large;
+            flex-wrap: no-wrap;
+            text-align: center;
+            text-decoration: none;
+            transition: font-size .5s ease;
+            color: black;
+            color:black;
+        }
+        .dropdown-content a:hover {
+            color: rgb(0, 36, 70);
+            text-align: center;
+            text-decoration: underline;
+            font-size: x-large;
+            color: teal;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+            border: 3px solid rgb(0, 36, 70);
+            border-radius: 12px;
+            transform: translateX(20px);
+        }
+        #heaven {
+            color: inherit; /* Maintain the current text color */
+            text-decoration: none; /* Remove the underline */
+        }
+        
+        #heaven:visited,
+        #heaven:active {
+            color: inherit; /* Keep the same color as before */
+            text-decoration: none; /* Ensure the underline doesn't appear */
+        }
+        a {
+        color: #007bff; /* Change link color */
+        color: black;
+        text-decoration: none;
+        }
+        
+        a:hover {
+       
+        color: teal;
+        text-decoration: underline;
+        }
+
+        #banner1 {
+        display: none;
+        }
+        .icon {
+            width: 60px;
+            height: 60px;
+            display: inline-block;
+            margin: 0px;
+            padding: 10px;
+            transform: scaleX(1);
+            
+        }
+        .icon1 {
+            width: 60px;
+            height: 60px;
+            display: inline-block;
+            margin: 40px;
+            padding: 10px;
+            transform: scaleX(1);
+            animation: dilate 8s infinite; /* Apply the animation */
+        }
+        
+        @keyframes dilate {
+            0% {
+                transform: scale(1) scaleX(1); /* Normal size and flip horizontally */
+            }
+            10% {
+                transform: scale(1) scaleX(1); /* Start dilating and flip horizontally */
+            }
+            40% {
+                transform: scale(1) scaleX(1); /* Return to normal size and flip horizontally */
+            }
+            60% {
+                transform: scale(1.12) scaleX(1); /* Stay normal and flip horizontally */
+            }
+            65% {
+                transform: scale(1) scaleX(1); /* Dilate again and flip horizontally */
+            }
+            100% {
+                transform: scale(1) scaleX(1); /* Back to normal and flip horizontally */
+            }
+        }
+        
+        .container {
+            margin: 0 auto;
+            min-width: 70px;
+          
+            padding: 20px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            display: flex:
+            align-items: center;
+       
+     
+          
+        
+           
+   
+        }
+        
+        footer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-top: 5px solid #f9f9f9;
+            border-bottom: 5px solid #f9f9f9;
+            line-height: 1;
+            background-color: white;
+           
+            text-align: justify;
+  
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .row-menu {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            overflow-x: auto; /* Enable horizontal scrolling */
+            width: 100%;
+            overflow-y: scroll;
+            max-height: 2000px;
+            box-shadow:  2px 2px 4px rgba(0,0,0,0.5);
+         
+        }
+        
+        .row-header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: max-content; /* Make sure the row takes width according to its content */
+        }
+       
+        .row-values {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: max-content; /* Make sure the row takes width according to its content */
+           
+        }
+        
+        .row-header {
+            background-color: #f0f0f0;
+            font-weight: bold;
+            position: sticky; /* Sticky header to stay on top while scrolling */
+            top: 0; /* Stick to the top */
+            z-index: 1; /* Ensure header is on top of other content */
+        }
+        
+        .row {
+            display: flex;
+            flex-direction: row;
+            width: max-content; /* Ensure the row spans the full width of its container */
+      
+           
+        }
+        
+        .all_headers {
+            background-color: #f0f0f0; 
+     
+      
+        }
+        .header-item {
+            white-space: nowrap;
+            overflow-x: none;
+        }
+        .header-item,
+        .value-item,
+        .button-item {
+            flex: 1 0 15%; /* Flex-grow, flex-shrink, and flex-basis set to ensure equal width */
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+            width: 10vw;
+            min-width: 90px;
+            margin-bottom: 0px;
+            height: auto;
+
+        }
+        
+        .row-header .header-item {
+            border-bottom: 2px solid #ddd;
+            background-color: #f0f0f0;
+        }
+        
+        .value-item {
+            background-color: #ffffff;
+           
+              margin-bottom: 0px;
+        }
+
+        .available-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 1px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%; /* Ensure the button takes full width of the cell */
+            font-family: helvetica, sans-serif;
+
+            transition: box-shadow 0.5s ease-in-out;
+            border: 1px solid gray;
+        }
+        
+        .available-btn:hover {
+            background-color: #388e3c;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            box-shadow: inset 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .joinable-btn {
+            background-color: #2196f3;
+            color: white;
+            border: none;
+            padding: 10px 1px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%; /* Ensure the button takes full width of the cell */
+            margin-bottom: 0px;
+            margin-top: 0px;
+            font-family: helvetica, sans-serif;
+
+            transition: box-shadow 0.5s ease-in-out;
+            border: 1px solid gray;
+        }
+        
+        .joinable-btn:hover {
+            background-color: #1976d2;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+                box-shadow: inset 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .unavailable-btn {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 10px 1px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: normal;
+            border-radius: 4px;
+            width: 100%; /* Ensure the button takes full width of the cell */
+            font-family: helvetica, sans-serif;
+
+            transition: box-shadow 0.5s ease-in-out;
+            border: 1px solid gray;
+        }
+        .unavailable-btn:hover {
+            background-color: #d32f2f;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            box-shadow: inset 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .sorting-menu {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 16px;
+     
+        }
+        
+        .sorting-menu label {
+            margin: 0 10px;
+            font-family: helvetica, sans-serif;
+            font-size: medium;
+      
+        }
+        .gapLines {
+            border-bottom: 5px solid #f9f9f9;
+         
+        }
+        .header_container {
+            
+            background-color: #f8f9fa;
+            background-color: white;
+            border-radius: 5%;
+          
+            border: 1px solid #ddd;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 0px;
+            margin: 0 auto;
+            margin-bottom: 25px;
+            max-width: 800px;
+            background-color: #f0f0f0;
+            background-color: #f8f9fa;
+            box-shadow: 2px 2px 2px rgba(0,0,0, 0.5);
+            background: linear-gradient(to bottom, #f8f9fa, #f0f0f0);
+        }
+        .header_title {
+            border-bottom: 0px solid black;
+            line-height: .75;
+            margin: 20px auto;
+            white-space: wrap;
+        }
+        .sorter {
+            background-color: #f0f0f0;
+            background-color: #f8f9fa;
+       
+ 
+       
+            padding: 0px;
+            border-top: 1px solid black;
+        }
+    
+        @media only screen and (min-width: 801px) {
+            #jungle {
+                justify-content: space-between;
+                }
+                #banner2 {
+                    display: none;
+                    }
+                #banner1 {
+                    display: flex; flex-direction: row; align-items: center; justify-content: space-evenly; flex-wrap: wrap; align-items: center;
+                    }
+           
+        }
+        @media only screen and (max-width: 800px) {
+            #jungle {
+                justify-content: center;
+                }
+                #banner2 {
+                    display: flex; flex-direction: row; align-items: center; justify-content: space-evenly; flex-wrap: wrap;
+                    }
+                    #banner1 {
+                    display: none;
+                    }
+        }
+ 
+    
+    </style>    
+</head>
+
+<body>
+    <header style=' margin-top: 0px;'>
+        
+        <div class="banner" id='banner1' >
+            <div style='margin-top: 20px;display: flex; flex-direction: row; line-height: 1; width: 100%; background-color: #f9f9f9; border-bottom: 1px solid black; justify-content: space-between; align-items:center; white-space: nowrap; '>
+
+                <div style='box-shadow: inset 0px 2px 4px rgba(0,0,0,0.5), inset 0px -2px 4px  rgba(0,0,0,0.5); display: flex; justify-content: space-evenly; align-items: center; width: 100%; background-color: #f9f9f9; font-size: 24px; height: 96px; '>
+                    <div>
+                        <h1 class='slide-in-text' style='font-weight: 600; display: flex; flex-direction: row; justify-content: center; align-items: center; letter-spacing: 1px;color: rgb(255,170,120); -webkit-text-stroke: 1px teal; text-shadow: 2px 2px teal;  font-style:italic; margin-top: 20px'>
+                            ParkPlay  
+                            <span>
+                                <img src="basketball.png" alt="Basketball Image" class="icon">
+                            </span> 
+                        </h1>  
+                    </div>
+                    <div>
+                        <a class='disappear' id='a2'  href='index.html' >Sign-Up Sheets</a>
+                    </div>   
+                    <div>
+                        <a class='disappear' id='a2' href='my_reservations.html' >My Reservations</a>
+                    </div>   
+                </div>   
+            </div>
+            <div id='jungle'style='justify-content: space-around;box-shadow: inset 0px 2px 4px rgba(0,0,0,0.5), inset 0px -2px 4px  rgba(0,0,0,0.5); border-bottom: 1px solid black; margin-top: 10px; width: 100%; display: flex; flex-direction: row; background-color: #f9f9f9; border-bottom: 1px solid black;  flex-wrap: wrap; line-height: 1; height: 60px;  '>
+                <a class='disappear' href='user_guide.html'>User Guide</a>  
+                <a class='disappear' href='analytics.html'>Analytics</a>  
+                <a class='disappear' href='policies.html' >Policies</a>
+                <a class='disappear' href='donate.html'>Donate</a>
+                <a class='disappear'href='contact_us.html' >Contact Us</a>
+            </div>
+           
+        </div>
+        </div>
+            <div class="banner" id='banner2' >
+            <div style='box-shadow: inset 0px 2px 4px rgba(0,0,0,0.5), inset 0px -2px 4px  rgba(0,0,0,0.5);margin-top: 20px;display: flex; flex-direction: row;  border-bottom: 1px solid black;  background-color: #f9f9f9; width: 100%; justify-content: space-evenly; align-items: center; height: 96px; line-height:1; font-size: 24px; '>
+                <div style=' display: flex; justify-content: center;'>
+                <h1 class='slide-in-text' style='display: relative; flex-direction: row; align-items: center;margin-left:-15px; letter-spacing: 1px; font-weight: 600; letter-spacing: 1px; color: rgb(255,170,120); -webkit-text-stroke: 1px teal; text-shadow: 2px 2px teal; font-style:italic; margin-top: 20px'>ParkPlay</h1>
+            </div>
+            <div class="dropdown" style='display: flex; justify-content: center;'>
+            <a style='text-decoration: none; font-size: xx-large;' id="heaven" href="#index">  <span>
+                <img src="basketball.png" alt="Basketball Image" class="icon1">
+            </span></a>
+                <div class='dropdown-content' style='line-height: 2.5;'>
+                    <a class='banner_links' href='index.html'>Sign-Up Sheets</a>
+                    <a class='banner_links' href='my_reservations.html' >My Reservations</a>
+                    <a class='banner_links' href='user_guide.html'>User Guide</a>
+                    <a class='banner_links' href='analytics.html'>Analytics</a>
+                    <a class='banner_links' href='policies.html' >Policies</a>
+                    <a class='banner_links' href='donate.html'>Donate</a>
+                    <a class='banner_links'href='contact_us.html' >Contact Us</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </header>
+   
+    <main  >
+        <div >
+            <br>
+              <div id='ls' style='display: flex;  justify-content: center; flex-direction: column; text-align: center;border: 1px solid black;  width: 50%; min-width: 275px; margin: 0 auto; background-color: #f9f9f9;  border-radius: 5px;  box-shadow: 2px 2px 4px rgba(0,0,0,0.5); margin-bottom: 20px;'>
+                   
+                <h1 style=' text-decoration: underline; font-size: 24px;'>My Reservations</h1>
+               
+                 </div>
+            <div class="container" >
+
+                
+
+                <div class="row-menu" >
+                    <div class="row-inner">
+                        <div class='all_headers' style = "top: 0; position: sticky;">
+                        <div class="row-header">
+                            <div class="header-item">Select</div>
+                            <div class="header-item">Time</div>
+                            <div class="header-item">Sub-location</div>
+                            <div class="header-item">Reserved By</div>
+                            <div class="header-item">All Openings</div>
+                            <div class="header-item">Spots Left</div>
+                            <div class="header-item">People Joined</div>
+                            <div class="header-item">Level</div>
+                            <div class="header-item">Point Rules</div>
+                            <!--<div class="header-item">Game Id</div>-->
+                        </div>
+                        </div>
+                      
+                        <!--this is where you janja the type of timeslot, where joinable is. -->
+                        <!--__________________-->
+                        <div   class="gapLines unavailable " > 
+                            <div  class="row-values row {{ game[3] }}" >
+                                <div class="value-item">
+                                    
+                                    <a href="user_input_unavailable.html" class="unavailable-btn">
+                                        Reserved
+                                    </a>
+                                </div>
+                       
+                                <div class="value-item">2025-01-31 09:30 PM</div>
+                                <div class="value-item">Court #2</div>
+                                <div class="value-item">
+                                    Jake K.
+                                </div>
+                                <div class="value-item">2</div>
+                                <div class="value-item">0</div>
+                                <div class="value-item">
+                                    Chris B. <br>
+                                    Tara W.
+                                </div>
+                                <div class="value-item">Beginner</div>
+                                <div class="value-item">No Points</div>
+                                <!--<div  class="value-item">{{ game[0] }}</div>-->
+                            </div>
+                            </div>
+                            <!--____________________-->
+
+                        
+
+                    </div>
+                </div>
+        
+                <!-- Repeat .row-menu for each time slot -->
+            </div>
+        </div>
+        
+    </main>
+</div>
+</body>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const showJoinable = document.getElementById('show-joinable');
+            const showAvailable = document.getElementById('show-available');
+            const showUnavailable = document.getElementById('show-unavailable');
+        
+            const updateVisibility = () => {
+                const joinableRows = document.querySelectorAll('.row-values.joinable');
+                const availableRows = document.querySelectorAll('.row-values.available');
+                const unavailableRows = document.querySelectorAll('.row-values.unavailable');
+                
+                const avail_gap = document.querySelectorAll('.gapLines.available');
+                const unavail_gap = document.querySelectorAll('.gapLines.unavailable');
+                const join_gap = document.querySelectorAll('.gapLines.joinable');
+        
+                joinableRows.forEach(row => row.style.display = showJoinable.checked ? 'flex' : 'none');
+                availableRows.forEach(row => row.style.display = showAvailable.checked ? 'flex' : 'none');
+                unavailableRows.forEach(row => row.style.display = showUnavailable.checked ? 'flex' : 'none');
+
+                avail_gap.forEach(row => row.style.display = showAvailable.checked ? 'flex' : 'none');
+                unavail_gap.forEach(row => row.style.display = showUnavailable.checked ? 'flex' : 'none');
+                join_gap.forEach(row => row.style.display = showJoinable.checked ? 'flex' : 'none');
+ 
+            };
+        
+            if (showJoinable && showAvailable && showUnavailable) {
+                showJoinable.addEventListener('change', updateVisibility);
+                showAvailable.addEventListener('change', updateVisibility);
+                showUnavailable.addEventListener('change', updateVisibility);
+        
+                updateVisibility(); // Initial visibility check
+            } else {
+                console.warn('One or more filter elements are missing in the DOM.');
+            }
+        
+            adjustGapLinesWidth();
+        
+            function adjustGapLinesWidth() {
+                const gapLines = document.querySelectorAll('.gapLines');
+                const rowMenu = document.querySelector('.row-menu');
+                const header = document.querySelector('.all_headers');
+                const rows = document.querySelector('.row');
+        
+                if (rowMenu) {
+                    const width = rowMenu.scrollWidth;
+                    gapLines.forEach(gapLine => {
+                        gapLine.style.width = `${width}px`;
+                    })
+                    if (header) header.style.width = `${width}px`;
+        
+        
+                } else {
+                    console.warn('.row-menu element is missing in the DOM.');
+                }
+            }
+        
+            window.addEventListener('resize', adjustGapLinesWidth);
+            
+            let oldWidth = window.innerWidth;
+            window.addEventListener('resize', function() {
+                let newWidth = window.innerWidth;
+                if (newWidth !== oldWidth) {
+                    oldWidth = newWidth;
+                    setTimeout(function() {
+                        window.location.reload();
+                    }, 500);
+                }
+            });
+        });
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+                const row_buttons = document.querySelectorAll('.available-btn, .unavailable-btn, .joinable-btn');
+                row_buttons.forEach(button => {
+                    button.addEventListener('click', function(event) {
+                      
+                        const gameId = this.value;
+                        
+                        // Prepare form data
+                        const formData = {
+                            action: 'ids',
+                            game_id: gameId
+                        };
+                        if (!navigator.cookieEnabled) {
+                            alert("Cookies are disabled in your browser. Please enable cookies to continue.\n\nFor Chrome Browser:\nBrowser Preferences > Settings > Privacy and Security > Cookies and Other site data > Allow all cookies")
+                            return
+                        }
+                        // Send data to Flask server
+                        fetch('/registry_schedule', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(formData)
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.redirect_url) {
+                                if (data.message) {
+                                alert(data.message)
+                                window.location.href = data.redirect_url;
+                                }
+                                window.location.href = data.redirect_url;
+                            } else {   
+                                alert(data.message);
+                                console.log(data.message);
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                        });
+                    });
+                });
+            });
+
+            const which_day = document.getElementById('which_day');
+              
+                which_day.addEventListener('change', function(event) {
+                            event.preventDefault(); // Prevent default button behavior
+
+                            // Prepare form data
+                            const formData = {
+                                action: 'change_day',
+                                day: document.getElementById('which_day').value
+                              
+                            };
+                            
+                            // Send data to Flask server
+                            fetch('/registry_schedule', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify(formData)
+                            })
+                            .then(response => {
+                                
+                                if (response.redirected) {
+                                    if (data.message) {
+                                        alert(data.message);
+                                    }
+                                    window.location.href = response.url; // Handle server-side redirect
+                                } 
+                                else {
+                                    return response.json();
+                                }
+                            })
+                            .then(data => {
+                                if (data.success) {
+                                    //alert(data.message)
+                                    window.location.href = "/registry_schedule";
+                                    console.log(data.message);
+      
+                                }
+                            })
+                            .catch(error => {
+                                console.error('Error:', error);
+                            });
+                        });
+                   
+        </script>
+
+</html>

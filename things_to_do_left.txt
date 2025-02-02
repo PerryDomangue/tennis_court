@@ -1,0 +1,4 @@
+To Do List:
+
+-put meta description tags on all html pages for SEO
+-design sub location placks, with QR codes
